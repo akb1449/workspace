@@ -64,7 +64,11 @@ def sum_numbers_one_to_ten():
     Use the accumulator pattern:
     http://interactivepython.org/runestone/static/thinkcspy/Functions/TheAccumulatorPattern.html
     """
-    pass
+    runningtotal = 0
+    for counter in range(11):
+        runningtotal = runningtotal + counter
+
+    return runningtotal
 
 def check_is_even(number):
     """
@@ -73,11 +77,16 @@ def check_is_even(number):
     hint: use modulo operator
     https://docs.python.org/3/reference/expressions.html
     """
-    pass
+    if number % 2 == 0:
+    	return True
+    else: 
+	return False
 
 def check_is_less_than(number1, number2):
     """
     This functions returns True if number1 < number2
     else False
     """
-    pass
+    if number1 < number2:
+	return True
+    return False
