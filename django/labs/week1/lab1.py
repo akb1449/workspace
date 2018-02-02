@@ -79,7 +79,7 @@ def check_is_even(number):
     """
     if number % 2 == 0:
     	return True
-    else: 
+    else:
 	return False
 
 def check_is_less_than(number1, number2):
@@ -88,5 +88,21 @@ def check_is_less_than(number1, number2):
     else False
     """
     if number1 < number2:
-	return True
+	    return True
     return False
+
+def check_is_greater_than(number1, number2):
+    """
+    This functions returns True if number2 > number1
+    else False
+    """
+    if number2 > number1:
+	    return True
+    return False
+
+def square(num):
+    """
+    This functions will square an integer being passed in
+    """
+    num2 = num * num
+    return num2

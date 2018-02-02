@@ -266,6 +266,63 @@ def test_check_is_less_than(results_dict):
         test_failed(results_dict)
     print(message)
 
+def test_check_is_greater_than(results_dict):
+    """
+    Checks that lab1.check_is_greater_than(number1, number2) returns
+    True if number2 is greater than number1, else False
+    """
+    print("")
+    print("Testing lab1.check_is_greater_than()")
+    message = "----"
+    try:
+        result = lab1.check_is_greater_than(2, 4)
+        if not isinstance(result, bool):
+            message += 'Did not return a boolean - Fail'
+            test_failed(results_dict)
+        else:
+            message += 'A boolean was returned - Pass'
+            test_passed(results_dict)
+            # now check if the result is true (4 is greater than 2)
+            if result is True:
+                message += '\n---- 4 is greater than 2, True - Pass'
+                test_passed(results_dict)
+            else:
+                message += '\n---- 4 is greater than 2, False - Fail'
+                test_failed(results_dict)
+            # try again, with number2 < number1
+            result = lab1.check_is_greater_than(6, 4)
+            if result is False:
+                message += '\n---- 4 is greater than 6, False - Pass'
+                test_passed(results_dict)
+            else:
+                message += '\n---- 4 is greater than 6, True - Fail'
+                test_failed(results_dict)
+    except AttributeError:
+        message += 'Could not find lab1.check_is_greater_than function - Fail'
+        test_failed(results_dict)
+    print(message)
+
+def test_square(results_dict):
+    """
+    Checks that lab1.square() outputs the correct integer squared value
+    """
+    print("")
+    print("Testing lab1.square()")
+    message = "----"
+    try:
+        result = lab1.square(3)
+        if not isinstance(result, int):
+            message += 'Did not return an integer - Fail'
+            test_failed(results_dict)
+        else:
+            print result
+            message += 'Square(3) Function returned correct value - Pass'
+            test_passed(results_dict)
+    except AttributeError:
+        message += 'Could not find lab1.square() function - Fail'
+        test_failed(results_dict)
+    print(message)
+
 def run():
     """
     This function is the test runner. It calls the functions
@@ -288,6 +345,8 @@ def run():
     test_sum_numbers_one_to_ten(results_dict)
     test_check_is_even(results_dict)
     test_check_is_less_than(results_dict)
+    test_check_is_greater_than(results_dict)
+    test_square(results_dict)
 
     print("")
     print("Final Results:")
