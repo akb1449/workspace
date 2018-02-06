@@ -54,7 +54,7 @@ def give_me_a_tuple():
     """
     This function returns a tuple
     """
-    return ('abc')
+    return (1, 2, 3)
 
 def sum_numbers_one_to_ten():
     """
