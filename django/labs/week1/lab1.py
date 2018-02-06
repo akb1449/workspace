@@ -67,7 +67,6 @@ def sum_numbers_one_to_ten():
     runningtotal = 0
     for counter in range(11):
         runningtotal = runningtotal + counter
-
     return runningtotal
 
 def check_is_even(number):
