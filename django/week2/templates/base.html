@@ -3,11 +3,11 @@
 <html>
   <head>
     {% block title %} {% endblock %}
-    <link rel='stylesheet' href="{% static 'css/style.css' %}" />
+    <link type="text/css" rel='stylesheet' href="{% static 'css/style.css' %}" />
   </head>
   <body>
-      <div class="homepage-banner">
-        <nav>
+      <div>
+        <nav class="homepage-banner">
         <a href="{% url 'home' %}">Homepage</a> |
         <a href="{% url 'resume' %}">Resume</a> |
         <a href="{% url 'portfolio' %}">Portfolio</a> |
