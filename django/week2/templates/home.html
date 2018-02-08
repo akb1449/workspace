@@ -4,10 +4,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Homepage</title>
-    <div class='homepage-content'>
-      <h1>Welcome to my Homepage!</h1>
-        <a class='my-button' href="{% url 'home' %}">My Home Page</a>
-    </div>
+    {% block title %}
+      <title>Homepage</title>
+    {% endblock %}
   </head>
+      <body>
+        {% block content %}
+          <div class='homepage-content'>
+          <div class='homepage-banner'>
+            <h1>Welcome to my Portfolio</h1>
+            <hr>
+            <h4>Andry Bintoro</h4>
+            <p>MS IT Candidate '18</p>
+            <p>University of New Hampshire</p>
+          </div>
+          <a class='my-button' href="{% url 'home' %}">My Homepage</a>
+          </div>
+        {% endblock %}
+      </body>
 </html>
