@@ -10,7 +10,6 @@
   </head>
       <body>
         {% block content %}
-          <div class='homepage-content'>
           <div class='homepage-banner'>
             <h1>Welcome to my Portfolio</h1>
             <hr>
@@ -18,7 +17,8 @@
             <p>MS IT Candidate '18</p>
             <p>University of New Hampshire</p>
           </div>
-          <a class='my-button' href="{% url 'home' %}">My Homepage</a>
+          <div class='homepage-content'>
+            <a class='my-button' href="{% url 'home' %}">My Homepage</a>
           </div>
         {% endblock %}
       </body>
