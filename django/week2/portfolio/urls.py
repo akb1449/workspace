@@ -18,6 +18,7 @@ from django.urls import path
 
 from . import views
 
+#routes to views according to path
 urlpatterns = [
     path(r'', views.home, name='home'),
     path(r'home/', views.home, name='home'),

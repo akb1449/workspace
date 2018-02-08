@@ -1,25 +1,25 @@
 from django.shortcuts import render
 
 def home(request):
-    '''
-    Renders Home page
-    '''
+    """
+    Takes the request and renders Home page
+    """
     return render(request, 'home.html')
 
 def resume(request):
-    '''
-    Renders Resume page
-    '''
+    """
+    Takes the request and renders Resume page
+    """
     return render(request, 'resume.html')
 
 def portfolio(request):
-    '''
-    Renders Portfolio page
-    '''
+    """
+    Takes the request and renders Portfolio page
+    """
     return render(request, 'portfolio.html')
 
 def contact(request):
-    '''
-    Renders Contact page
-    '''
+    """
+    Takes the request and renders Contact page
+    """
     return render(request, 'contact.html')
