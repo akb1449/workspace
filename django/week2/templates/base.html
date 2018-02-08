@@ -2,17 +2,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio of Andry Bintoro</title>
+    {% block title %} {% endblock %}
     <link rel='stylesheet' href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <div class='banner'>
-      <nav>
-      <a href="{% url 'home' %}">Homepage</a> |
-      <a href="{% url 'resume' %}">Resume</a> |
-      <a href="{% url 'portfolio' %}">Portfolio</a> |
-      <a href="{% url 'contact' %}">Contact</a>
-      </nav>
-    </div>
+      <div class="homepage-banner">
+        <nav>
+        <a href="{% url 'home' %}">Homepage</a> |
+        <a href="{% url 'resume' %}">Resume</a> |
+        <a href="{% url 'portfolio' %}">Portfolio</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+      </div>
+      {% block content %}
+      {% endblock %}
   </body>
 </html>
