@@ -4,10 +4,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <body>
-      <div class='homepage-content'>
-        <h1>Portfolio</h1>
-      </div>
-    </body>
+    {% block title %}
+    <title>Portfolio</title>
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="Portfolio of Andry Bintoro."/>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href = {% static 'css/style.css' %}>
   </head>
+    <body>
+      {% block content %}
+      <div class='portfolio-content'>
+        <h1>Portfolio</h1>
+        <a href="https://foss.unh.edu/projects/index.php/comp730:MeAndYou_Project"> MeAndYou Project with Professor Jonas </a>
+        <img src = {% static 'images/meandyou.png' %} alt="Home Page | MeAndYou" />
+        <img src = {% static 'images/Aboutus.png' %} alt="About Us | MeAndYou" />
+      </div>
+      {% endblock %}
+    </body>
 </html>
