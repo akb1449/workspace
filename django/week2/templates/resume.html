@@ -3,127 +3,155 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Andry Bintoro - Resume</title>
+	<head>
+		{% block title %}
+			<title>Resume</title>
+		{% endblock %}
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="description" content="Resume of Andry Bintoro."/>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href = {% static 'css/style.css' %}>
+	</head>
 
-<meta name="viewport" content="width=device-width"/>
-<meta name="description" content="The Resume of Andry Bintoro."/>
-<meta charset="UTF-8">
-
-<link type="text/css" rel="stylesheet" href="style.css">
-
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-<body id="top">
-<div id="cv" class="instaFade">
-	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="headshot.jpg" alt="Andry Bintoro" />
-		</div>
-
-		<div id="name">
-			<h1 class="quickFade delayTwo">Andry Bintoro</h1>
-			<h2 class="quickFade delayThree">IT Support Specialist</h2>
-		</div>
-
-		<div id="contactDetails" class="quickFade delayFour">
-			<ul>
-				<li>e: <a href="mailto:aki3@wildcats.unh.edu" target="_blank">aki3@wildcats.unh.edu</a></li>
-				<li>w: <a href="http://www.instagram.com/definegreatline">Instagram</a></li>
-				<li>m: 585-708-9083</li>
-			</ul>
-		</div>
-		<div class="clear"></div>
-	</div>
-
-	<div id="mainArea" class="quickFade delayFive">
-		<section>
-			<article>
-				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
-				</div>
-
-				<div class="sectionContent">
-					<p></p>
-				</div>
-			</article>
-			<div class="clear"></div>
-		</section>
-
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+	<body id="top">
+	{% block content %}
+	<div id="cv" class="instaFade">
+		<div class="mainDetails">
+			<div id="headshot" class="quickFade">
+				<img src = {% static 'images/pic.jpg' %} alt="Andry Bintoro" />
 			</div>
 
-			<div class="sectionContent">
-				<article>
-					<h2>Desktop Engineer at Greenpages</h2>
-					<p class="subDetails">October 2015 - March 2017</p>
-					<p></p>
-				</article>
-
-				<article>
-					<h2>IT Specialist Mid at World IT Solutions</h2>
-					<p class="subDetails">January 2015 - September 2015</p>
-					<p></p>
-				</article>
-
-				<article>
-					<h2>Utility Equipment Repairer at NH Army National Guard</h2>
-					<p class="subDetails">December 2010 - August 2017</p>
-					<p></p>
-				</article>
-			</div>
-			<div class="clear"></div>
-		</section>
-
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Key Skills</h1>
+			<div id="name">
+				<h1 class="quickFade delayTwo">Andry Bintoro</h1>
+				<h2 class="quickFade delayThree">IT Support Specialist</h2>
 			</div>
 
-			<div class="sectionContent">
-				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
+			<div id="contactDetails" class="quickFade delayFour">
+				<ul>
+					<li>e: <a href="mailto:aki3@wildcats.unh.edu" target="_blank">aki3@wildcats.unh.edu</a></li>
+					<li>w: <a href="http://www.instagram.com/definegreatline">Instagram</a> |
+	        <a href="http://www.linkedin.com/in/andry-bintoro">LinkedIn</a></li>
+					<li>m: 585-708-9083</li>
 				</ul>
 			</div>
 			<div class="clear"></div>
-		</section>
+		</div>
 
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Education</h1>
-			</div>
-
-			<div class="sectionContent">
+		<div id="mainArea" class="quickFade delayFive">
+			<section>
 				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p></p>
-				</article>
+					<div class="sectionTitle">
+						<h1>Personal Profile</h1>
+					</div>
 
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p></p>
+					<div class="sectionContent">
+						<ul>
+	            <li>Over five years of experience working as an IT Specialist </li>
+	            <li>Proven ability to identify, analyze, and solve problems</li>
+	            <li>Hard worker, quick learner, team player </li>
+	            <li>Enthusiastic, dependable, self-motivated </li>
+	            <li>Avid Dancer, Sports and Car Enthusiast </li>
+	          </ul>
+					</div>
 				</article>
-			</div>
-			<div class="clear"></div>
-		</section>
+				<div class="clear"></div>
+			</section>
 
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Work Experience</h1>
+				</div>
+
+				<div class="sectionContent">
+	        <article>
+						<h2>Signal Support Systems Specialist at NH Army National Guard</h2>
+						<p class="subDetails">March 2016 - Present</p>
+	          <ul>
+						   <li>Maintain radio and data distribution systems. </li>
+	             <li>Perform signal support functions and technical assistance for computer systems. </li>
+	             <li>Provide technical assistance and training for local area networks. </li>
+	             <li>Maintenance for equipment, terminal devices, assigned vehicles </li>
+	          </ul>
+					</article>
+
+	        <article>
+						<h2>Desktop Engineer at Greenpages</h2>
+						<p class="subDetails">October 2015 - March 2017</p>
+	          <ul>
+	            <li>Supported users’ laptops, desktops, thin clients, servers, and printers within corporate domain of 3,000 users.</li>
+	            <li>Deployed and connected VPN clients to thousands of users with Cisco Any Connect, Junos Pulse and Pulse Secure.</li>
+	            <li>Created mailboxes and managed Security and Distribution Groups in Exchange Management Server 2010 using Active Directory and PowerShell.</li>
+	            <li>Managed LDAP and Active Directory LDS for Single Sign On, file sharing servers, and other integrated systems in UNIX-based environment.</li>
+	            <li>Assisted users in web video conferences for any communication troubles with phone systems.</li>
+	          </ul>
+					</article>
+
+					<article>
+						<h2>IT Specialist Mid at World IT Solutions</h2>
+						<p class="subDetails">January 2015 - September 2015</p>
+	          <ul>
+	            <li>Managed all help desks, network operations centers, and base operations of the Navy and Marine Corps.</li>
+	            <li>Performed system administration tasks: reimage base workstations using Systems Center Configuration Manager and Active Directory.</li>
+	            <li>Set up base configuration and security policies – keep software up to date, monitor status of workstations to customers.</li>
+	            <li>Managed and installed printers and scanners of Portsmouth Naval Shipyard according to DoD Next Generation Enterprise Network / Navy Marine Core Intranet contract.</li>
+						</li>
+					</article>
+
+				</div>
+				<div class="clear"></div>
+			</section>
+
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Software Skills</h1>
+				</div>
+
+				<div class="sectionContent">
+					<ul class="keySkills">
+						<li>Java</li>
+						<li>C++</li>
+						<li>HTML5</li>
+						<li>CSS</li>
+						<li>PHP</li>
+						<li>Javascript</li>
+						<li>Python</li>
+						<li>MySQL</li>
+	          <li>MS SQL Server</li>
+	          <li>Microsoft Access</li>
+	          <li>PowerShell</li>
+	          <li>Bash</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</section>
+
+
+			<section>
+				<div class="sectionTitle">
+					<h1>Education Highlights</h1>
+				</div>
+
+				<div class="sectionContent">
+					<article>
+						<h2>Graduate</h2>
+	          <h3>University of New Hampshire</h3>
+	          <p>Information Technolgy</p>
+						<p>Master of Science - December 2018</p>
+					</article>
+
+					<article>
+						<h2>Undergraduate</h2>
+	          <h3>Rochester Institute of Technology</h3>
+	          <p>Information Technolgy</p>
+						<p>Bachelor of Science - August 2014</p>
+					</article>
+				</div>
+				<div class="clear"></div>
+			</section>
+		</div>
 	</div>
-</div>
-</body>
+	{% endblock %}
+	</body>
 </html>
