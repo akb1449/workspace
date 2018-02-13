@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+      {% block title %}
+        <title>Contact Me</title>
+      {% endblock %}
+      <meta name="viewport" content="width=device-width"/>
+      <meta name="description" content="Contact Me Here"/>
+      <meta charset="UTF-8">
+      <link type="text/css" rel="stylesheet" href = {% static 'css/style.css' %}>
+    </head>
+    <body>
+      {% block content %}
+      <div class="container">
+      <form action="action_page.php">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Type Your First Name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Type Your Last Name..">
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Type Your Email Address">
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="brazil">Brazil</option>
+        <option value="canada">Canada</option>
+        <option value="south africa">South Africa</option>
+        <option value="uk">United Kingdom</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write me a message" style="height:200px"></textarea>
+          <input type="submit" value="Submit">
+      </form>
+      </div>
+      {% endblock %}
+    </body>
+</html>

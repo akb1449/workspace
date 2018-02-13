@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block title %}
+      <title>Homepage</title>
+    {% endblock %}
+  </head>
+      <body>
+        {% if resume %}
+          <ul>
+            {% for resume in resumes %}
+              <li> {{resume}} </li>
+            {% end for %}
+          </ul>
+        {% else %}
+
+          <h1>No Resume found! Contact your Administrator.</h1>
+        {% endif %}
+      </body>
+</html>
