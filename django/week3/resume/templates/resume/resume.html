@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+  {% block content %}
+        <p><strong>EXPERIENCE</strong></p>
+        {% if experience %}
+            {% for company in experience %}
+                <ul><b>{{company.title}}</b> - {{company.location}}<br />
+                Description: {{company.description}}<br />
+                {{company.start_date}} - {{company.end_date}}
+                </ul>
+            {% endfor %}
+        {% else %}
+            <ul>No Experience Defined!</ul>
+        {% endif %}
+
+        <p><strong>EDUCATION</strong></p>
+        {% if education %}
+            {% for school in education %}
+                <ul><b>{{school.institution_name}}</b>, {{school.location}}<br />
+                Degree: {{school.degree}}<br />
+                Major: {{school.major}}, GPA: {{school.gpa}}
+                </ul>
+            {% endfor %}
+        {% else %}
+            <ul>No Education Defined!</ul>
+        {% endif %}
+  {% endblock %}

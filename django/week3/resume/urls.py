@@ -21,5 +21,5 @@ from . import views
 app_name = 'resume'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.home, name='index'),
 ]
