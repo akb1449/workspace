@@ -10,7 +10,7 @@ def resume(request):
     """
     Takes the request and renders Resume app
     """
-    return render(request, '/resume')
+    return render(request, 'resume')
 
 def portfolio(request):
     """
