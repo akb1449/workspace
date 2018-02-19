@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+  {% block content %}
+    <h1>{{ name }}</h1>
+    <p><strong>EXPERIENCE</strong></p>
+      {% if experience %}
+          {% for experience in resume.get_experience %}
+            <ul><b>{{experience.title}}</b> - {{experience.location}}<br /></ul>
+            <ul>Description: {{experience.description}}<br /></ul>
+            <ul>{{experience.start_date}} - {{experience.end_date}}<br /></ul>
+          {% endfor %}
+      {% else %}
+          <ul>No Experience Defined!</ul>
+      {% endif %}
+
+    <p><strong>EDUCATION</strong></p>
+      {% if education %}
+          {% for education in resume.get_education %}
+            <ul><b>{{education.institution_name}}</b>, {{education.location}}<br /></ul>
+            <ul>Degree: {{education.degree}}<br /></ul>
+            <ul>Major: {{education.major}}<br /></ul>
+            <ul>GPA: {{education.gpa}}<br /></ul>
+          {% endfor %}
+      {% else %}
+          <ul>No Education Defined!</ul>
+      {% endif %}
+  {% endblock %}

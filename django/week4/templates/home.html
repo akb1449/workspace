@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block title %}
+      <title>Homepage</title>
+    {% endblock %}
+  </head>
+      <body>
+        {% block content %}
+          <div class='homepage-banner'>
+            <h1>Welcome to my Portfolio</h1>
+            <hr>
+            <h4>Andry Bintoro</h4>
+            <p>MS IT Candidate '18</p>
+            <p>University of New Hampshire</p>
+          </div>
+          <div class='homepage-content'>
+            <a class='my-button' href="{% url 'home' %}">My Homepage</a>
+          </div>
+        {% endblock %}
+      </body>
+</html>
