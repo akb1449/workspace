@@ -41,7 +41,7 @@ def test_squared_nums(results_dict):
             test_failed(results_dict)
         else:
             print(result)
-            message = 'Return squared values of 1,2,3 - Pass'
+            message = 'Returned squared values of 1,2,3 - Pass'
             test_passed(results_dict)
             print(message)
     except AttributeError:
@@ -55,7 +55,7 @@ def test_squared_nums(results_dict):
             test_failed(results_dict)
         else:
             print(result)
-            message = 'Return squared values of [] - Pass'
+            message = 'Returned squared values of [] - Pass'
             test_passed(results_dict)
             print(message)
     except AttributeError:
@@ -69,7 +69,7 @@ def test_squared_nums(results_dict):
             test_failed(results_dict)
         else:
             print(result)
-            message = 'Return squared values of -1,-2,-3 - Pass'
+            message = 'Returned squared values of -1,-2,-3 - Pass'
             test_passed(results_dict)
             print(message)
     except AttributeError:
@@ -83,7 +83,7 @@ def test_squared_nums(results_dict):
             test_failed(results_dict)
         else:
             print(result)
-            message = 'Return squared values of 1,0 - Pass'
+            message = 'Returned squared values of 1,0 - Pass'
             test_passed(results_dict)
             print(message)
     except AttributeError:
@@ -111,7 +111,7 @@ def test_check_title(results_dict):
         test_failed(results_dict)
 
     try:
-        result = lab2.check_title(['Hello_World', 'A great 3 Days', 'hello World'])
+        result = lab2.check_title(['Hello World', 'A great 3 Days', 'hello World'])
         if not isinstance(result, list):
             message = 'Did not return a list - Fail'
             test_failed(results_dict)

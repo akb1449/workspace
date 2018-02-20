@@ -9,12 +9,6 @@ def squared_nums(num_list):
     squares numbers in num_list
     num_list: list of numbers
     Returns: list of these numbers squared
-    >>> squared_nums([1, 2, 3])
-    [1 ,4, 9]
-    >>> squared_nums([])
-    []
-    >>> [-1, -2]
-    [1, 4]
     """
     new_list = [ ]  #initialize list to hold results
     #iterate through num_list and square each element
@@ -31,12 +25,12 @@ def check_title(title_list):
     Returns: list of strings that are titles
     """
     #initialize list to hold strings
-    new_list = [" "]
+    title_list = [" "]
     #iterate through title_list and remove strings that have numbers
     for string in title_list:
         if string.istitle() and string.isalpha():
             title_list.append(string)
-    return new_list
+    return title_list
 
 def restock_inventory(inventory):
     """
@@ -47,12 +41,12 @@ def restock_inventory(inventory):
     Returns: updated dictionary where each inventory item is restocked
     """
     #initialize new inventory
-    new_inventory = { }
+    inventory = { }
 
     for key, value in inventory.items():
         val = val + 10
         inventory[key] = val
-    return new_inventory
+    return inventory
 
 def filter_0_items(inventory):
     """
@@ -63,7 +57,7 @@ def filter_0_items(inventory):
     Returns: the same inventory_dict with any item that had 0 quantity removed
     """
     #initialize new inventory
-    new_inventory = { }
+    inventory = { }
 
     for key, value in inventory.items():
         if value in inventory == 0:
@@ -74,7 +68,7 @@ def filter_0_items(inventory):
         else:
             inventory.update()
         """
-    return new_inventory
+    return inventory
 
 def average_grades(grades):
     """

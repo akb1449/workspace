@@ -12,6 +12,8 @@ def switch_case(str_list):
     str_list: list of strings
     Returns: list of original strings, but with
     opposite casing
+    >>> switch_case([test])
+    [Test]
     """
     if str_list[0][:1].isupper():
         str_list[0][:1].swapcase()

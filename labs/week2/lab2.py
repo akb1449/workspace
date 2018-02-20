@@ -24,13 +24,12 @@ def check_title(title_list):
     title_list: list of strings
     Returns: list of strings that are titles
     """
-    #initialize list to hold strings
-    title_list = [" "]
+    new_list = [" "]    #initialize list to hold strings
     #iterate through title_list and remove strings that have numbers
     for string in title_list:
-        if string.istitle() and string.isalpha():
-            title_list.append(string)
-    return title_list
+        if string.isalpha() and string.istitle():
+            new_list.append(string)
+    return new_list
 
 def restock_inventory(inventory):
     """
@@ -40,15 +39,13 @@ def restock_inventory(inventory):
         value: integer that equals the number of that item currently on hand
     Returns: updated dictionary where each inventory item is restocked
     """
-    #initialize new inventory
-    inventory = { }
-
+    new_inventory = { }    #initialize new inventory
     for key, value in inventory.items():
         val = val + 10
         inventory[key] = val
         #value += 10
         #inventory.update({key:value})
-    return inventory
+    return new_inventory
 
 def filter_0_items(inventory):
     """
@@ -58,19 +55,17 @@ def filter_0_items(inventory):
         value: nteger that equals the number of that item currently on hand
     Returns: the same inventory_dict with any item that had 0 quantity removed
     """
-    #initialize new inventory
-    inventory = { }
-
+    new_inventory = { }    #initialize new inventory
     for key, value in inventory.items():
         if value in inventory == 0:
-            inventory[key]=value
+            new_inventory[key]=value
         """
         if value == 0:
             inventory.pop({key:None})
         else:
             inventory.update()
         """
-    return inventory
+    return new_inventory
 
 def average_grades(grades):
     """
@@ -80,8 +75,7 @@ def average_grades(grades):
         value: list of integer grades received in class
     Returns: dictionary that averages out the grades of each student
     """
-    #initialize new grades
-    new_grades = {}
+    new_grades = {} #initialize new grades
     for name, grades in grades.items():
         new_grades[name]=sum(grades) /len(grades)
     return new_grades
