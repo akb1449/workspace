@@ -11,9 +11,9 @@ def home(request):
     qs_exp = my_resume.get_experience()
     qs_edu = my_resume.get_education()
 
-    context = {'resume':my_resume,
-        'name':full_name,
-        'experience':qs_exp,
-        'education':qs_edu}
+    context = { 'resume':my_resume,
+                'name':full_name,
+                'experience':qs_exp,
+                'education':qs_edu }
     #print(context)
     return render(request, 'resume/resume.html', context)
