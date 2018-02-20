@@ -9,5 +9,6 @@ def home(request):
     qs_exp = Experience.objects.all()
     qs_edu = Education.objects.all()
     context = {'experience': qs_exp, 'education': qs_edu}
-    print(context)
+    #print(context)
     return render(request, 'resume/resume.html', context)
+#
