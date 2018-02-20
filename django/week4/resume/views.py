@@ -7,13 +7,7 @@ def home(request):
     Returns resume.html page
     """
     my_resume = Resume.objects.first()
-    full_name = Resume.objects.first().get_full_name()
-    qs_exp = my_resume.get_experience()
-    qs_edu = my_resume.get_education()
 
-    context = { 'resume':my_resume,
-                'name':full_name,
-                'experience':qs_exp,
-                'education':qs_edu }
+    context = { 'resume':my_resume, }
     #print(context)
     return render(request, 'resume/resume.html', context)
