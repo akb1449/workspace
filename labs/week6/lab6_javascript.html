@@ -124,19 +124,18 @@
 	function get_data(){
   	fetch('https://jsonplaceholder.typicode.com/comments/')
   	.then(response => response.json())
-		.catch(error => console.log('Error:', error))
-  	.then(json => function json(){
+  	.then(function(json){
 			json.forEach(function(obj){
-	 			var str = JSON.parse(obj);
+	 			var str = JSON.stringify(obj);
 				var li = document.createElement("li");
 		    var fake_list = document.getElementById("fake_list");
 
-		    li.appendChild(document.createTextNode(str));
+		    li.innerHTML = str;
 		    //JSON data placeholder
-		    list.appendChild(li);
+		    fake_list.appendChild(li);
 			});
 				console.log(json);
-		});
+		}).catch(error => console.log('Error:', error));
 	}
 
 </script>
